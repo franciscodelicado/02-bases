@@ -1,0 +1,17 @@
+<ul class="list-group">
+  <li *ngFor="
+        let character of characterList;
+        index as i;
+
+        even as IsEven;
+      "
+      class="list-group-item d-flex justify-content-between align-items-center"
+      [ngClass]="{'list-group-item-success':IsEven,
+                  'list-group-item-danger': !IsEven}" >
+      <div>
+        <span class="text-primary"> {{i+1}}.- </span>
+        <span>{{character.name}} - </span><strong>Power: </strong> <span>{{character.power}}</span>
+      </div>
+      <button class="btn btn-danger" (click)="deleteCharacter(character.id)">X</button>
+    </li>
+</ul>
