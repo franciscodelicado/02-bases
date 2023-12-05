@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:github": "ng build --base-href ./dafa; mv ./dist/bases/browser/* ./docs/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
